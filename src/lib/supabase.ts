@@ -1,11 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
 
-const SUPABASE_URL = 'https://supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_SC9FLJ1wPu-KaYfjT6dKgA_vHbDloJk';
+const supabaseUrl = 'https://supabase.co';
+const supabaseAnonKey = 'sb_publishable_SC9FLJ1wPu-KaYfjT6dKgA_vHbDloJk';
 
-export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-  auth: {
-    persistSession: false,
-    autoRefreshToken: false,
-  },
-});
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
